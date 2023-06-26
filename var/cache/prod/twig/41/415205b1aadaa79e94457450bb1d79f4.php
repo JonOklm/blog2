@@ -1,0 +1,99 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* statique/quiSommesNous.html.twig */
+class __TwigTemplate_572619560af1f5741a448e5686c87d9b extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'content' => [$this, 'block_content'],
+        ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "layout.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $this->parent = $this->loadTemplate("layout.html.twig", "statique/quiSommesNous.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 2
+    public function block_content($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 3
+        echo "    <div class=\"page-statique\">
+        <h2>Qui sommes nous ?</h2>
+        <br>
+            <p class=\"text-block first\">
+                Quentin a décidé de fonder MonBlog alors que le web était encore bébé. Une idée simple mais efficace : et si on offrait à n'importe qui les moyens d'écrire n'importe quoi ? Il commence
+                à faire des prototypes grâce à son modem 56 bauds, un minitel électronique, sa tondeuse à gazon diesel et des connaissances en FORTRAN.
+            </p>
+            <p class=\"text-block\">Vite rejoint par Martin, un ancien
+                de la dataviz blockchain temps réelle en deep learning asynchrone, le projet prend une nouvelle ampleur. Pour cet as de la technique, c'est sûr, on peut faire un site fiable et moderne
+                en moins d'une semaine en utilisant le framework <a href=\"https://symfony.com/doc/current/index.html#gsc.tab=0\">Symfony!</a> Disciple de Fabien Potencier, qu'il tient pour le cyber-messie du
+                <a href=\"https://fr.wikipedia.org/wiki/Modèle-vue-contrôleur\">MVC</a>, il règle l'affaire en seulement 5 jours. </p>
+            <p class=\"text-block\">
+                le 20/02/2002, Quentin et Martin lancent MonBlog dans un état d'excitation de 18,9 sur l'échelle de Fukushima.
+            </p>
+            <p class=\"text-block\">
+                C'est le succès dès la première heure : il ne s'est jamais démenti !
+            </p>
+
+        <div class=\"quote\">
+            <p>
+                \" Entre internet et nous, c'est un peu le big love total. \"
+            </p>
+            <p class=\"quoter\">
+                Quentin Starteupe, Business Marketing Operative CEO de MonBlog
+            </p>
+        </div>
+    </div>
+";
+    }
+
+    public function getTemplateName()
+    {
+        return "statique/quiSommesNous.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  50 => 3,  46 => 2,  35 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("", "statique/quiSommesNous.html.twig", "C:\\Users\\madou\\OneDrive\\Bureau\\SYMFONY\\blog2\\templates\\statique\\quiSommesNous.html.twig");
+    }
+}

@@ -1,0 +1,2 @@
+vous allez créer une entité Categorie ayant un nom puis la relier a l'entité Article afin que chaque article puisse être categorisé
+un article peut appartenir a une ou plusieurs categories

@@ -1,0 +1,42 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+
+cgv: # correspond au name de la route
+    path: /cgv # la route elle même (à mettre dans l'url pour y acceder)
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController # le controller appellé via la route
+    defaults:
+        template: "statique/cgv.html.twig" # le template à afficher
+
+contact:
+    path: /contact
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController    
+    defaults:
+        template: "statique/contact.html.twig"
+
+devenir_blogueur:
+    path: /devenirBlogueur
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController    
+    defaults:
+        template: "statique/devenirBlogueur.html.twig"        
+
+join_team:
+    path: /joinTeam
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController    
+    defaults:
+        template: "statique/joinTeam.html.twig"        
+
+qui_sommes_nous:
+    path: /quiSommesNous
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController    
+    defaults:
+        template: "statique/quiSommesNous.html.twig"        
+
+values:
+    path: /values
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController    
+    defaults:
+        template: "statique/values.html.twig"        

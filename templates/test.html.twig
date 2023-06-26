@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    {# ceci est un commentaire. declaration d'une variable en twig #}
+    {% set prenom = "Hocine" %}
+
+
+    <h3>
+        bonjour je suis {{ prenom }}  {{ toto }}{# on appel une variable entre double accolades #}
+    </h3>
+    <h3>
+        bonjour la personne c'est : {{ personne.nom ~ ' ' ~ personne.prenom }}{# lorsque ma variable est un tableau on acceder à un element avec le point "."  , le tilde ~ est pour la concatenation #}
+    </h3>
+
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+        </tr>
+        {# lorsque ma variable est un tableau multidimentionnel, je le parcours avec une boucle twig {% for row in array %}  row qui représente une ligne du tableau, sera remplacé par la variable de votre choix et array par le tableau qu'on veut parcourir #}
+        {% for personne in personnes %} 
+            <tr>
+                <td>{{ personne.nom }}</td>
+                <td>{{ personne.prenom }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock body %}

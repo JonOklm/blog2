@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} Accueil{% endblock %}
+
+{% block content %}
+<div class"row mt-5 justify-content-center text-center">
+    <h1>Dernier article publié: </h1>
+
+    <div class="col-4">
+        <img src="{{ asset('imagesArticle/' ~ article.image) }}" alt="">
+    </div>
+
+    <div class="col-8">
+        <h3> {{ article.titre }}</h3>
+        <h6>crée le: {{ article.dateDeCreation | date("d/m/Y \à H\\hi") }} </h6>
+        {% if article.dateDeModification is not null %}
+            <h6>dérnière modification: {{ article.dateDeModification | date("d/m/Y \à H\\hi") }} </h6>
+        {% endif %}
+
+        {% if article.auteur %}
+            <h4>écrit par: {{ article.auteur.fullName }} </h4>
+        {% else %}
+            <h6 class="text-muted">auteur anonyme</h6>
+        {% endif %}
+        
+        <p> {{ article.contenu | slice(0,150) | raw }}<a href="">...lire la suite</a></p>
+    </div>
+
+</div>
+{% endblock %}
